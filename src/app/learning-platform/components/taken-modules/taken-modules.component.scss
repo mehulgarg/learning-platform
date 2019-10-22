@@ -5,6 +5,7 @@
     float: left;
     width: 33%;
     padding: 0 10px;
+    background-color:rgba(0, 0, 0, 0.815);
   }
 
 /* Responsive columns */
@@ -16,10 +17,19 @@
     }
     }
     
-    /* Style the counter cards */
+   
     .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    text-align: center;
-    background-color: #f1f1f1;
-} 
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      padding: 16px;
+      text-align: center;
+      background-color: #f1f1f1;
+      height: 350px;
+  
+  } 
+  
+  .card-heading{
+    font-family: cursive  ;
+    font-size: 30px;
+    color:grayscale($color: #00000081);
+  }
+  

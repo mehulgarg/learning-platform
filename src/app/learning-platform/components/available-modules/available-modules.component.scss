@@ -1,3 +1,5 @@
+
+
 * {
     box-sizing: border-box;
   }
@@ -5,21 +7,50 @@
     float: left;
     width: 33%;
     padding: 0 10px;
+    background-color:rgba(0, 0, 0, 0.815);
   }
-
 /* Responsive columns */
 @media screen and (max-width: 600px) {
     .column {
         width: 100%;
         display: block;
         margin-bottom: 20px;
+      
     }
     }
+
     
-    /* Style the counter cards */
+  
     .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
     text-align: center;
     background-color: #f1f1f1;
+    height: 350px;
+    
 } 
+
+.card-heading{
+  font-family: cursive  ;
+  font-size: 30px;
+  color:grayscale($color: #00000081);
+}
+
+.para{
+  font-family: cursive  ;
+  font-size: 15px;
+
+
+}
+.btn{
+  padding: 15px 25px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 1px #999;
+  font-family: cursive;
+}
+.btn:active{
+  background-color: #abb4ac;
+}
