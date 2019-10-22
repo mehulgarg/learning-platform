@@ -1,0 +1,6 @@
+<div class="column">
+    <div class="card">
+        <h3>Available modules</h3>
+        <button *ngFor="let module of this.modules" class="btn" (click)="take($event)" >{{module}}</button>
+    </div>
+</div>
