@@ -1,11 +1,10 @@
 import { Component, EventEmitter ,Input,Output,OnInit } from '@angular/core';
 
-
 @Component({
   selector: 'app-available-modules',
   templateUrl: './available-modules.component.html',
   styleUrls: ['./available-modules.component.scss']
-  
+
 })
 /*
 export class AvailableModulesComponent{
@@ -36,20 +35,5 @@ export class AvailableModulesComponent implements OnInit {
     console.log(this.inputName);
     console.log(this.bodyDiv);
     this.buttonClicked.emit(this.inputName);
-  }
-
-  /*public modules = ["Laravel","Flask","Django","Spring"]
-
-  frameworksTaken(module:any){ 
-    console.log(module.target.textContent)
-    module.target.textContent
-    
-  }
-
-  constructor() { }
-
-  ngOnInit() {
-    
-  }
-  */
+    }
 }
