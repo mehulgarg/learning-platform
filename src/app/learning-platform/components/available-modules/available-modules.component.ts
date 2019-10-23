@@ -1,4 +1,4 @@
-import { Component, EventEmitter ,Input,Output,OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-available-modules',
@@ -10,10 +10,10 @@ import { Component, EventEmitter ,Input,Output,OnInit } from '@angular/core';
 export class AvailableModulesComponent{
   @Input()  name: string;
   @Output() chosen = new EventEmitter<string>();
-  
+
   frameworksTaken(modules: string) {
     this.chosen.emit(modules);
-    
+
   }
 }
 */
@@ -35,5 +35,5 @@ export class AvailableModulesComponent implements OnInit {
     console.log(this.inputName);
     console.log(this.bodyDiv);
     this.buttonClicked.emit(this.inputName);
-    }
+  }
 }
