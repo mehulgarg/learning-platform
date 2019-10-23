@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 
 })
 export class FullPageComponent implements OnInit {
-  
+
   constructor() { }
 
   ngOnInit() {
-    
+
   }
 
 

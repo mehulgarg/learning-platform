@@ -31,13 +31,11 @@
 } 
 
 .card-heading{
-  font-family: cursive  ;
   font-size: 30px;
   color:grayscale($color: #00000081);
 }
 
 .para{
-  font-family: cursive  ;
   font-size: 15px;
 
 
@@ -49,7 +47,6 @@
   cursor: pointer;
   border-radius: 5px;
   box-shadow: 0 1px #999;
-  font-family: cursive;
 }
 .btn:active{
   background-color: #abb4ac;
