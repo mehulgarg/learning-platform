@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-//import { ChosenModulesService } from '../../services/chosen-modules.service';
+import { Component, EventEmitter ,Input,Output,OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-available-modules',
@@ -7,12 +7,42 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./available-modules.component.scss']
   
 })
+/*
+export class AvailableModulesComponent{
+  @Input()  name: string;
+  @Output() chosen = new EventEmitter<string>();
+  
+  frameworksTaken(modules: string) {
+    this.chosen.emit(modules);
+    
+  }
+}
+*/
+
 export class AvailableModulesComponent implements OnInit {
 
-  public modules = ["Laravel","Flask","Django","Spring"]
+  bodyDiv = false;
+  inputName = '';
+  @Output() buttonClicked = new EventEmitter();
 
-  take(module:any){ 
+  constructor() { }
+
+  ngOnInit() {
+  }
+  frameworksTaken() {
+    console.log('frameworksTaken clicked.');
+    this.bodyDiv = true;
+    this.inputName = document.getElementById('userInput').innerHTML;
+    console.log(this.inputName);
+    console.log(this.bodyDiv);
+    this.buttonClicked.emit(this.inputName);
+  }
+
+  /*public modules = ["Laravel","Flask","Django","Spring"]
+
+  frameworksTaken(module:any){ 
     console.log(module.target.textContent)
+    module.target.textContent
     
   }
 
@@ -21,5 +51,5 @@ export class AvailableModulesComponent implements OnInit {
   ngOnInit() {
     
   }
-
+  */
 }
