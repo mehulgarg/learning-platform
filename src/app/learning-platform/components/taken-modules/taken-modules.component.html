@@ -1,6 +1,7 @@
 <div class="column">
     <div class="card">
         <h3 class="card-heading">Frameworks chosen</h3>
-
+        <app-available-modules (buttonClicked)='showNextComponent($event)'></app-available-modules>
+        <p *ngIf="name">{{ name }} </p>
     </div>
 </div>

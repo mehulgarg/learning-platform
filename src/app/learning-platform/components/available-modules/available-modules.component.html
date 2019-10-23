@@ -3,9 +3,16 @@
 <div class="column">
     <div class="card">
         <h3 class="card-heading">Frameworks available</h3>
-        <button class="btn" *ngFor="let module of this.modules"  (click)="take($event)" >{{module}}</button>
-       
-        <p class="para">Click to choose your framework</p>
+        <button class="btn" (click)="frameworksTaken()">Spring</button>
+        Choose your framework : <input type="text" id="userInput" class="para">
+        
+        
+        <!--<button class="btn" *ngFor="let module of this.modules" (click)="frameworksTaken()">{{module}}</button>-->
+        <!--<button class="btn" (click)="frameworksTaken(Laravel)">Laravel</button>
+        <button class="btn" (click)="frameworksTaken(Django)">Django</button>
+        <button class="btn" (click)="frameworksTaken(Flask)">Flask</button>-->
+         <!--<p class="para">choose your framework</p>-->
+        
     </div>
 </div>
 </div>
