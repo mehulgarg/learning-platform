@@ -1,4 +1,6 @@
-import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit ,OnDestroy} from '@angular/core';
+import { SelectedModulesService } from '../../services/selected-modules.service';
+
 
 @Component({
   selector: 'app-available-modules',
@@ -6,34 +8,18 @@ import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
   styleUrls: ['./available-modules.component.scss']
 
 })
-/*
 export class AvailableModulesComponent{
-  @Input()  name: string;
-  @Output() chosen = new EventEmitter<string>();
 
-  frameworksTaken(modules: string) {
-    this.chosen.emit(modules);
+  courses:string[] = ["Laravel","Django","Flask"]
 
+  constructor(private tempuser:SelectedModulesService) { }
+
+  frameworksTaken(e){
+    console.log(e.target.textContent)
+    this.tempuser.user.addCourses(e.target.textContent)
   }
-}
-*/
-
-export class AvailableModulesComponent implements OnInit {
-
-  bodyDiv = false;
-  inputName = '';
-  @Output() buttonClicked = new EventEmitter();
-
-  constructor() { }
 
   ngOnInit() {
   }
-  frameworksTaken() {
-    console.log('frameworksTaken clicked.');
-    this.bodyDiv = true;
-    this.inputName = document.getElementById('userInput').innerHTML;
-    console.log(this.inputName);
-    console.log(this.bodyDiv);
-    this.buttonClicked.emit(this.inputName);
-  }
 }
+
