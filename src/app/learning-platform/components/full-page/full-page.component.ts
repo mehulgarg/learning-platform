@@ -15,5 +15,9 @@ export class FullPageComponent implements OnInit {
 
   }
 
+  testFunction(event) {
+    console.log('test ', event);
+  }
+
 
 }

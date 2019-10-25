@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
-//import { BehaviorSubject } from 'rxjs';
-/*@Injectable({
+
+import { BehaviorSubject } from 'rxjs';
+@Injectable({
   providedIn: 'root'
-})*/
-/*
+})
+
 @Injectable()
-export class ChosenModulesService{
+export class ChosenModulesService {
 
   private messageSource = new BehaviorSubject('default message');
   currentMessage = this.messageSource.asObservable();
@@ -13,9 +14,8 @@ export class ChosenModulesService{
   constructor() { }
 
   changeMessage(message: string) {
-    this.messageSource.next(message)
+    this.messageSource.next(message);
   }
 
 }
-*/
 
