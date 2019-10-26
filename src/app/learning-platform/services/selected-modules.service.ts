@@ -6,8 +6,8 @@ import { Users } from '../models/users';
 })
 export class SelectedModulesService {
 
-  user:Users = null
-  constructor() { 
-    this.user = new Users("Onu")
+  user: Users = null;
+  constructor() {
+    this.user = new Users('test');
   }
 }
