@@ -1,0 +1,40 @@
+.main-landing-header {
+    background: url("../../../../assets/back_home.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;;
+    height: 60%;
+}
+
+.fancy-text-div {
+    margin-top: 2%;
+    width: 100%;
+}
+
+.fancy-text {
+    color: ghostwhite;
+    text-shadow: 2px 1px #999;
+    font-family: 'Arimo', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 50px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.description-text-div {
+    margin-top: 3%;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+}
+
+.description-text{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+.quote-text {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+}

@@ -10,7 +10,7 @@ import { SelectedModulesService } from './learning-platform/services/selected-mo
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

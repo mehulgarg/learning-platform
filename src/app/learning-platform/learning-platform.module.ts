@@ -5,7 +5,10 @@ import { DemoMaterialModule } from '../core/material-module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [routingComponents, ],
+  declarations:
+  [
+    routingComponents,
+  ],
   imports: [
     LearningPlatformRoutingModule,
     CommonModule,

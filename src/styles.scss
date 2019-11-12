@@ -20,3 +20,23 @@ body { margin: 0; font-family: "Open Sans", sans-serif !important; }
   .form-control {
     background-color: #fafaff;
 }
+
+.color-dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.color-dark-secondary {
+  background-color: black;
+  // background: transparent;
+  opacity: 0.9;
+  color: white;
+}
+.input-dark {
+  color: black;
+  color: white;
+}
+.input-dark:focus {
+  background-color: black;
+  color: white;
+}
