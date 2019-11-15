@@ -1,0 +1,12 @@
+<div class="card color-dark width" *ngIf='framework'>
+    <img class="card-img-top" src="../../../../assets/logos/{{ framework.frameworkName.toLowerCase() }}.png"
+        alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">{{ framework.frameworkName}}</h5>
+        <p class="card-text">{{ framework.frameworkDescription }}</p>
+        <p class="card-text">Modules: {{ framework.modules }}</p>
+        <a href="/frameworks/{{ framework.frameworkId }}"
+            [routerLink]="['/frameworks', framework.frameworkId , framework.frameworkName ]"
+            class="btn btn-block btn-outline-light">Get Started</a>
+    </div>
+</div>

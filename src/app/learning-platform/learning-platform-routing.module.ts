@@ -3,12 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
-
+import { FrameworksComponent } from './components/frameworks/frameworks.component';
+import { IndividualFrameworkComponent} from './components/individual-framework/individual-framework.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'home', component: HomepageComponent},
+  { path: 'frameworks', component: FrameworksComponent },
+  { path: 'frameworks/:frameworkId/:frameworkName', component: IndividualFrameworkComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 @NgModule({
@@ -24,5 +27,7 @@ export class LearningPlatformRoutingModule {
 export const routingComponents = [
                                   LoginComponent,
                                   RegisterComponent,
-                                  HomepageComponent
+                                  HomepageComponent,
+                                  FrameworksComponent,
+                                  IndividualFrameworkComponent
                                  ];

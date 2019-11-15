@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { PasswordValidator } from 'src/app/shared/validators/password.validator';
 import { RegistrationService } from 'src/app/learning-platform/services/registration.service';
+import { AppConstants } from 'src/assets/app_constatns';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -17,7 +19,7 @@ export class RegisterComponent implements OnInit {
   get fullName() {
     return this.registrationForm.get('fullName');
   }
-  constructor(private formBuilder: FormBuilder, private registrationService: RegistrationService) { }
+  constructor(private formBuilder: FormBuilder, private registrationService: RegistrationService, private router: Router) { }
 
   ngOnInit() {
     this.registrationForm = this.formBuilder.group({
@@ -26,6 +28,12 @@ export class RegisterComponent implements OnInit {
       password: ['', [Validators.required]],
       confirmPassword: ['', [Validators.required]],
     }, {validator: PasswordValidator});
+    if (sessionStorage.getItem(AppConstants.IS_LOGGEDIN)) {
+      if (JSON.parse(sessionStorage.getItem(AppConstants.IS_LOGGEDIN))) {
+        console.log('logged in');
+        this.router.navigate(['/home']);
+      }
+    }
   }
   onSubmit() {
     console.log(this.registrationForm.value);
