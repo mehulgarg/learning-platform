@@ -5,6 +5,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { FrameworksComponent } from './components/frameworks/frameworks.component';
 import { IndividualFrameworkComponent} from './components/individual-framework/individual-framework.component';
+import { ModuleContentComponent } from './components/module-content/module-content.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'home', component: HomepageComponent},
   { path: 'frameworks', component: FrameworksComponent },
   { path: 'frameworks/:frameworkId/:frameworkName', component: IndividualFrameworkComponent },
+  { path: 'modules/:frameworkName/:moduleNumber', component: ModuleContentComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 @NgModule({
@@ -29,5 +31,6 @@ export const routingComponents = [
                                   RegisterComponent,
                                   HomepageComponent,
                                   FrameworksComponent,
-                                  IndividualFrameworkComponent
+                                  IndividualFrameworkComponent,
+                                  ModuleContentComponent
                                  ];

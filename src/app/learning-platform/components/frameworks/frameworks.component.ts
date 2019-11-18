@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AllFrameworks } from '../../models/allFrameworks';
 import { FrameworkDetails } from '../../models/frameworkDetails';
-import { AppConstants } from 'src/assets/app_constatns';
+import { AppConstants } from 'src/assets/app_constants';
 
 @Component({
   selector: 'app-frameworks',

@@ -9,12 +9,11 @@
                     <p class="text-success">New Skills to Acquire</p>
                 </div>
                 <div class="row">
-                    <p class="text-light">{{ module.moduleContent }}</p>
+                    <p class="text-light">{{ module.moduleTopic | slice:0:50 }}</p>
                 </div>
             </div>
             <div class="col">
-                <button class="btn btn-outline-light float-right align-middle"><a href="#"
-                        class="text-decoration-none text-light">View Module</a></button>
+                <button class="btn btn-outline-light float-right align-middle" (click)='viewModule(module.moduleName, module.moduleContent)'>View Module</button>
             </div>
         </div>
     </div>

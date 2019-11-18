@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/learning-platform/models/user';
-import { AppConstants } from 'src/assets/app_constatns';
+import { AppConstants } from 'src/assets/app_constants';
 import { Router } from '@angular/router';
 
 @Component({
@@ -24,6 +24,7 @@ export class NavBarComponent implements OnInit {
     console.log('log out clicked');
     sessionStorage.setItem(AppConstants.IS_LOGGEDIN, 'false');
     sessionStorage.removeItem(AppConstants.LOGGED_IN_USER);
+    sessionStorage.removeItem(AppConstants.TEXT_EDITOR_STARTED);
     this.router.navigate(['/login']);
   }
 

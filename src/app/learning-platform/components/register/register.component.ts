@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { PasswordValidator } from 'src/app/shared/validators/password.validator';
 import { RegistrationService } from 'src/app/learning-platform/services/registration.service';
-import { AppConstants } from 'src/assets/app_constatns';
+import { AppConstants } from 'src/assets/app_constants';
 import { Router } from '@angular/router';
 
 @Component({

@@ -9,7 +9,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavBarComponent } from '../../app/shared/components/nav-bar/nav-bar.component';
 import { FrameworkCardComponent } from '../../app/shared/components/framework-card/framework-card.component';
 import { ModuleCardComponent } from '../../app/shared/components/module-card/module-card.component';
-import { ModuleContentComponent } from './components/module-content/module-content.component';
 
 @NgModule({
   declarations:
@@ -18,7 +17,6 @@ import { ModuleContentComponent } from './components/module-content/module-conte
       NavBarComponent,
       FrameworkCardComponent,
       ModuleCardComponent,
-      ModuleContentComponent
     ],
   imports: [
     LearningPlatformRoutingModule,

@@ -1,11 +1,42 @@
 <app-nav-bar></app-nav-bar>
 <mat-toolbar>
-        <mat-toolbar-row class="h1 color-dark m-0">{{ frameworkName }}</mat-toolbar-row>
+    <mat-toolbar-row class="h1 color-dark m-0">{{ frameworkName }}</mat-toolbar-row>
 </mat-toolbar>
+
 <body class="color-dark-secondary">
-    <div class="container-fluid" *ngIf='individualModules'>
-        <div class="col-8" *ngFor='let module of individualModules; index as i'>
-            <app-module-card [module]=module [moduleNumber]=i class="m-4"></app-module-card>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-12" *ngFor='let module of individualModules; index as i'>
+                        <app-module-card [module]=module [moduleNumber]=i class="m-4" [frameworkName]=frameworkName></app-module-card>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mt-4">
+                <div class="col-lg-11 border border-white">
+                    <div class="row p-2">
+                        <p class="h2">Workspace</p>
+                    </div>
+                    <div class="row pb-2">
+                        <div class="col-lg-12" *ngIf='textEditorButton else tryAgain'>
+                            <button class="btn btn-block btn-outline-success" (click)='startTextEditor()'>{{ success == true ? 'Open Text Editor Window' : 'Start Text Editor'}}</button>
+                        </div>
+                        <ng-template #tryAgain>
+                            <div class="col-lg-12">
+                                <button class="btn btn-block btn-outline-danger" (click)='startTextEditor()'>Try Again</button>
+                            </div>
+                        </ng-template>
+                    </div>
+                    <div class="row p-2" *ngIf='startTextEditorClicked'>
+                        <p class="text-light text-muted font-italic">Loading the text editor it could take upto a minute
+                            to start.</p>
+                    </div>
+                    <div class="row p-2" *ngIf='success'>
+                            <p class="text-light font-italic">Text Editor started click to start open instance</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

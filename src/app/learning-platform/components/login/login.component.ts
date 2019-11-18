@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { LoginService } from '../../services/login.service';
 import { Router } from '@angular/router';
 import { User } from '../../models/user';
-import { AppConstants } from 'src/assets/app_constatns';
+import { AppConstants } from 'src/assets/app_constants';
 
 @Component({
   selector: 'app-login',
