@@ -20,10 +20,12 @@ export class FrameworkCardComponent implements OnInit {
   error: boolean;
   frameworkId;
   frameworkName;
-  frameworkDataUrl = 'http://127.0.0.1:5000/hassignedup';
-  initializeUrl = 'http://127.0.0.1:5000/initialize';
   // frameworkDataUrl = 'http://127.0.0.1:5000/hassignedup';
   // initializeUrl = 'http://127.0.0.1:5000/initialize';
+  frameworkDataUrl = 'http://192.168.43.144/framework_signup_exists';
+  initializeUrl = 'http://192.168.43.144/framework_signup';
+  // frameworkDataUrl = 'http://192.168.43.20/framework_signup_exists';
+  // initializeUrl = 'http://192.168.43.20/framework_signup';
   constructor(private http: HttpClient, private router: Router, private changeDetector: ChangeDetectorRef, private zone: NgZone, ) { }
 
   ngOnInit() {
@@ -37,7 +39,7 @@ export class FrameworkCardComponent implements OnInit {
     this.http.get<any>(this.frameworkDataUrl, {
       params: {
         email: this.loggedInUser.email,
-        frameworkId: this.framework.frameworkId.toString(),
+        frameworkId: this.framework.frameworkName.toString().toLowerCase(),
       }
     }).subscribe(
       data => {
@@ -73,11 +75,9 @@ export class FrameworkCardComponent implements OnInit {
   httpInit() {
     this.loadingClicked = true;
     this.zone.run(() => {
-      this.http.get<any>(this.initializeUrl, {
-        params: {
+      this.http.post<any>(this.initializeUrl, {
           email: this.loggedInUser.email,
-          frameworkName: this.framework.frameworkName,
-        }
+          frameworkName: this.framework.frameworkName.toString().toLowerCase(),
       }).subscribe(
         data => {
           console.log(data);

@@ -25,6 +25,10 @@ export class NavBarComponent implements OnInit {
     sessionStorage.setItem(AppConstants.IS_LOGGEDIN, 'false');
     sessionStorage.removeItem(AppConstants.LOGGED_IN_USER);
     sessionStorage.removeItem(AppConstants.TEXT_EDITOR_STARTED);
+    sessionStorage.removeItem(AppConstants.DEPLOYMENT_SERVER_STARTED);
+    sessionStorage.removeItem(AppConstants.TEXT_EDITOR_PASSWORD);
+    sessionStorage.removeItem(AppConstants.TEXT_EDITOR_URL);
+    sessionStorage.removeItem(AppConstants.DEPLOYMENT_SERVER_URL);
     this.router.navigate(['/login']);
   }
 
